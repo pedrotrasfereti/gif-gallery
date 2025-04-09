@@ -28,6 +28,7 @@ export default defineConfig((/* ctx */) => {
 
       'roboto-font', // optional, you are not bound to it
       'material-icons', // optional, you are not bound to it
+      'material-icons-outlined',
     ],
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#build
@@ -82,6 +83,7 @@ export default defineConfig((/* ctx */) => {
         brand: {
           primary: '#0059df',
           secondary: '#939393',
+          accent: '#00a5e7',
           dark: '#001337',
           positive: '#31cd82',
           negative: '#fa3535',
