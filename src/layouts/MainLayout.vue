@@ -6,7 +6,13 @@
 
         <q-toolbar-title class="mono-text text-h4" tag="h1">GIF SEARCH</q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>
+          <span class="text-subtitle2 q-mr-md">Pedro Trasfereti</span>
+
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/img/avatar.png" />
+          </q-avatar>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -26,7 +32,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import EssentialLink from '../components/EssentialLink.vue'
 
 const linksList = [
   {
