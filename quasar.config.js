@@ -26,7 +26,6 @@ export default defineConfig((/* ctx */) => {
       // 'line-awesome',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
-      'roboto-font', // optional, you are not bound to it
       'material-icons', // optional, you are not bound to it
       'material-icons-outlined',
     ],
@@ -81,13 +80,11 @@ export default defineConfig((/* ctx */) => {
     framework: {
       config: {
         brand: {
-          primary: '#0059df',
-          secondary: '#939393',
-          accent: '#00a5e7',
-          dark: '#001337',
+          primary: '#FF3B7F',
+          secondary: '#00F5EF',
+          accent: '#FFD21F',
           positive: '#31cd82',
           negative: '#fa3535',
-          surface: '#eff5f5',
         },
       },
 

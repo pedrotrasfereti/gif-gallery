@@ -1,14 +1,14 @@
 <template>
   <q-item
     :active="isActive(link)"
-    active-class="text-accent"
+    active-class="text-secondary"
     clickable
     dark
     v-ripple
     @click="$router.push(link)"
   >
     <q-item-section v-if="props.icon" avatar>
-      <q-icon :color="isActive(link) ? '' : 'secondary'" :name="props.icon" />
+      <q-icon :color="isActive(link) ? '' : 'grey-7'" :name="props.icon" />
     </q-item-section>
 
     <q-item-section>
