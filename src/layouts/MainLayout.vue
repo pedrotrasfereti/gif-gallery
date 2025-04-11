@@ -44,7 +44,7 @@ function toggleLeftDrawer() {
           <span class="text-subtitle2 q-mr-md">Pedro Trasfereti</span>
 
           <q-avatar>
-            <img src="https://cdn.quasar.dev/img/avatar.png" />
+            <img src="https://avatars.githubusercontent.com/u/70381963" />
           </q-avatar>
         </div>
       </q-toolbar>
