@@ -1,35 +1,3 @@
-<template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header dark>
-      <q-toolbar>
-        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
-
-        <q-toolbar-title class="mono-text text-h4" tag="h1">GIF SEARCH</q-toolbar-title>
-
-        <div>
-          <span class="text-subtitle2 q-mr-md">Pedro Trasfereti</span>
-
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/img/avatar.png" />
-          </q-avatar>
-        </div>
-      </q-toolbar>
-    </q-header>
-
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
-        <q-item-label header> Menu </q-item-label>
-
-        <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
-      </q-list>
-    </q-drawer>
-
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-  </q-layout>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 import EssentialLink from '../components/EssentialLink.vue'
@@ -63,3 +31,35 @@ function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value
 }
 </script>
+
+<template>
+  <q-layout view="lHh Lpr lFf">
+    <q-header dark>
+      <q-toolbar>
+        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+
+        <q-toolbar-title class="mono-text text-h4" tag="h1">GIF SEARCH</q-toolbar-title>
+
+        <div>
+          <span class="text-subtitle2 q-mr-md">Pedro Trasfereti</span>
+
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/img/avatar.png" />
+          </q-avatar>
+        </div>
+      </q-toolbar>
+    </q-header>
+
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+      <q-list>
+        <q-item-label header> Menu </q-item-label>
+
+        <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
+      </q-list>
+    </q-drawer>
+
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+  </q-layout>
+</template>
