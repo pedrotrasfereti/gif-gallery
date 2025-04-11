@@ -1,7 +1,7 @@
 <template>
   <q-item
     :active="isActive(link)"
-    active-class="text-secondary"
+    active-class="text-accent"
     clickable
     dark
     v-ripple
