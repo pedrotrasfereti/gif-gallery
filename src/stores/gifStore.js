@@ -68,7 +68,14 @@ export const useGifStore = defineStore('gif', {
       this.error = null
 
       try {
-        const data = await getTrendingGifs(offset)
+        let data
+
+        if (this.search.length > 0) {
+          data = await searchGifs(this.search, offset)
+        } else {
+          data = await getTrendingGifs(offset)
+        }
+
         this.gifs.push(...data)
       } catch (err) {
         this.error = err
@@ -82,12 +89,12 @@ export const useGifStore = defineStore('gif', {
       this.trendingSearches = data
     },
 
-    async searchGifs(query) {
+    async searchGifs() {
       this.error = null
       this.loading = true
 
       try {
-        const data = await searchGifs(query)
+        const data = await searchGifs(this.search)
         this.gifs = data
       } catch (err) {
         this.error = err
