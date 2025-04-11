@@ -17,7 +17,7 @@ const gifStore = useGifStore()
       <q-card flat>
         <q-img
           class="image"
-          :src="item.images.original.url"
+          :src="item.images.fixed_height_downsampled.url"
           :alt="item.title"
           spinner-color="secondary"
           spinner-size="md"
