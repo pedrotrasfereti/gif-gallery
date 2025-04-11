@@ -25,7 +25,7 @@ watch(searchTerm, () => {
 })
 
 const updateQuery = async () => {
-  gifStore.searchGifs(searchTerm.value)
+  gifStore.searchGifs()
 }
 </script>
 

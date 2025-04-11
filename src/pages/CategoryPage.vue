@@ -21,6 +21,16 @@ const loadMore = async (_index, done) => {
   gifStore.getMoreGifs(done)
 }
 
+const toggleSubCategory = (value) => {
+  if (gifStore.search === value) {
+    gifStore.search = categoryName
+    gifStore.searchGifs()
+  } else {
+    gifStore.search = value
+    gifStore.searchGifs()
+  }
+}
+
 onMounted(async () => {
   gifStore.search = categoryName
   gifStore.searchGifs(categoryName)
@@ -49,7 +59,7 @@ onBeforeUnmount(() => {
             color="accent"
             :outline="item.name !== gifStore.search"
             :text-color="item.name !== gifStore.search ? 'white' : 'black'"
-            @click="gifStore.search = item.name"
+            @click="() => toggleSubCategory(item.name)"
           >
             {{ item.name }}
           </q-chip>
