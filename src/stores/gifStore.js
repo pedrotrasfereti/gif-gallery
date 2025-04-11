@@ -10,6 +10,7 @@ import { LocalStorage } from 'quasar'
 
 export const useGifStore = defineStore('gif', {
   state: () => ({
+    search: '',
     categories: [],
     selectedCategory: null,
     gifs: [],

@@ -1,9 +1,15 @@
 <script setup>
 import useGifStore from 'src/stores/gifStore'
-import { ref, watch } from 'vue'
+import { computed, watch } from 'vue'
 
 const gifStore = useGifStore()
-const searchTerm = ref('')
+
+const searchTerm = computed({
+  get: () => gifStore.search,
+  set: (val) => {
+    gifStore.search = val
+  },
+})
 
 watch(searchTerm, () => {
   // Run after 1 second
