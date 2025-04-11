@@ -11,6 +11,7 @@ import { LocalStorage } from 'quasar'
 export const useGifStore = defineStore('gif', {
   state: () => ({
     categories: [],
+    selectedCategory: null,
     gifs: [],
     favorites: LocalStorage.getItem('favorites') || [],
     trendingSearches: [],
@@ -23,13 +24,20 @@ export const useGifStore = defineStore('gif', {
       this.gifs = []
     },
 
+    clearSelectedCategory() {
+      this.selectedCategory = null
+    },
+
+    setSelectedCategory(category) {
+      this.selectedCategory = category
+    },
+
     async getCategories() {
       this.error = null
       this.loading = true
 
       try {
         const data = await getCategories()
-        console.log('Categories:', data)
         this.categories = data
       } catch (err) {
         this.error = err
