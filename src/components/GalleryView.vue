@@ -29,7 +29,16 @@ const gifStore = useGifStore()
         </q-img>
 
         <q-card-actions class="justify-end">
-          <q-btn flat round color="grey-7" icon="share" />
+          <q-btn
+            flat
+            round
+            color="grey-7"
+            icon="share"
+            tag="a"
+            :href="item.url"
+            target="_blank"
+            ref="noreferrer"
+          />
 
           <q-btn
             flat
