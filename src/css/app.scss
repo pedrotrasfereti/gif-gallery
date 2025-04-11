@@ -40,3 +40,27 @@ body {
     break-inside: avoid;
   }
 }
+
+.special-button {
+  background-color: $primary;
+  color: white;
+  transition: background 0.5s ease-in-out;
+
+  &:hover {
+    background: linear-gradient(135deg, orange, $primary);
+    background-size: 200% 200%;
+    animation: gradientShift 2s ease infinite;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

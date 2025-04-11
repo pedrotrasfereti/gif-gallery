@@ -54,33 +54,7 @@ const setSelectedCategory = () => {
     </q-card-section>
 
     <q-card-actions vertical>
-      <q-btn class="gradient-hover-btn" label="Explorar Gifs" @click="setSelectedCategory" />
+      <q-btn class="special-button" label="Explorar Gifs" @click="setSelectedCategory" />
     </q-card-actions>
   </q-card>
 </template>
-
-<style lang="scss" scoped>
-.gradient-hover-btn {
-  background-color: #ff3b7f;
-  color: white;
-  transition: background 0.5s ease-in-out;
-
-  &:hover {
-    background: linear-gradient(135deg, orange, #ff3b7f);
-    background-size: 200% 200%;
-    animation: gradientShift 2s ease infinite;
-  }
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-</style>
